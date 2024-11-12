@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd MST Marks Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Your 3rd Mid-Semester Marks</h1>
+        <form action="/predict" method="POST">
+            <label for="marks1">Enter your 1st MST marks:</label>
+            <input type="number" id="marks1" name="marks1" required>
+            
+            <label for="marks2">Enter your 2nd MST marks:</label>
+            <input type="number" id="marks2" name="marks2" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction is not none %}
+        <div class="result">
+            <h2>Predicted 3rd MST Marks: {{ prediction }}</h2>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- AICE Footer -->
+    <footer class="footer">
+        <p>Powered by AICE </p>
+    </footer>
+</body>
+</html>
