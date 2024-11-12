@@ -1,0 +1,9 @@
+pip install Flask
+pip install numpy
+pip install scikit-learn
+pip install flask-cors
+pip install Flask numpy scikit-learn flask-cors
+   
+
+
+create virtual environoment
